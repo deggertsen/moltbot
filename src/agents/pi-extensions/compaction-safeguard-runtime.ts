@@ -1,6 +1,13 @@
+export type RecencyBufferConfig = {
+  enabled?: boolean;
+  keepMessages?: number;
+  keepTokens?: number;
+};
+
 export type CompactionSafeguardRuntimeValue = {
   maxHistoryShare?: number;
   contextWindowTokens?: number;
+  recencyBuffer?: RecencyBufferConfig;
 };
 
 // Session-scoped runtime registry keyed by object identity.
